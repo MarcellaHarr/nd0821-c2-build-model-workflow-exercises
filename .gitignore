@@ -487,3 +487,11 @@ lesson-1-machine-learning-pipelines/exercises/exercise_3/solution/outputs/
 lesson-1-machine-learning-pipelines/exercises/exercise_3/solution/process_data/artifacts/
 lesson-1-machine-learning-pipelines/exercises/exercise_3/solution/process_data/clean_data.csv
 lesson-1-machine-learning-pipelines/exercises/exercise_3/solution/process_data/wandb/
+
+# Exercise 3 (starter)
+lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/download_data/wandb/
+lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/mlflow.db
+lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/outputs/
+lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/process_data/artifacts/
+lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/process_data/clean_data.csv
+lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/process_data/wandb/
