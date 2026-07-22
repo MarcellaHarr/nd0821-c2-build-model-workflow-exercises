@@ -1,0 +1,11 @@
+# Defining the Project Environment File
+
+name: exercise_4_mlproject
+conda_env: conda.yml
+
+entry_points:
+  main:
+    command: >-
+      jupyter lab
+
+# End of file
