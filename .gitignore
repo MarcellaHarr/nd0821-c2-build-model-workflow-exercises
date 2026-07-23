@@ -496,7 +496,11 @@ lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/process_data/ar
 lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/process_data/clean_data.csv
 lesson-1-machine-learning-pipelines/exercises/exercise_3/starter/process_data/wandb/
 
-# Exercise 4 (starte)
+# Exercise 4 (starter)
 lesson-2-data-exploration-and-preparation/exercises/exercise_4/starter/wandb/
 lesson-2-data-exploration-and-preparation/exercises/exercise_4/starter/artifacts/
 lesson-2-data-exploration-and-preparation/exercises/exercise_4/starter/mlruns/
+
+# Exercise 5 (starter)
+lesson-2-data-exploration-and-preparation/exercises/exercise_5/starter/artifacts/
+lesson-2-data-exploration-and-preparation/exercises/exercise_5/starter/preprocessed_data.csv
