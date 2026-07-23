@@ -1,0 +1,14 @@
+# Defining the Conda Environment File
+
+name: ex5_preprocess_data
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pandas=2.3.2
+  - pip=24.3.1
+  - pyarrow=21.0.0
+  - pip:
+      - wandb>=0.28.0
+
+# End of file
