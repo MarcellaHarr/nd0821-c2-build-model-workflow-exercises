@@ -73,6 +73,13 @@ def test_class_names(data):
     # is true for every row. For example, df['one'].isin(['a','b','c']).all() is True if
     # all values in column "one" are contained in the list 'a', 'b', 'c'
 
+    #== assert all values in "genre" are in known_classes list ==
+    assert (
+        data["genre"]
+        .isin(known_classes)
+        .all()
+    )
+
 
 def test_column_ranges(data):
 
@@ -95,4 +102,16 @@ def test_column_ranges(data):
         # YOUR CODE HERE: check that the values in the column col_name are within the expected range
         # HINT: look at the .between method of pandas, and then use .all() like in the previous
         # test
-        pass
+
+        #== assert values in col_name are within range ==
+        assert (
+            data[col_name]
+            .dropna()
+            .between(minimum, maximum)
+            .all()
+        ), (
+            #== add assertion message ==
+            f"Column {col_name} has values outside of the expected range "
+            f"Range should be between {minimum} and {maximum}, "
+            f"Actual range is min={data[col_name].min()} and max={data[col_name].max()}"
+        )
