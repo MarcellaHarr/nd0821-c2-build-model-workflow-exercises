@@ -43,9 +43,14 @@ def test_kolmogorov_smirnov(data):
 
     for col in numerical_columns:
 
-        # Use the 2-sample KS test (scipy.stats.ks_2sample) on the column
-        # col
-        ts, p_value = None, None # YOUR CODE HERE
+        #== return the test statistic and the p-value ==
+        ts, p_value = scipy.stats.ks_2samp(
+            sample1[col],
+            sample2[col],
+            alternative = 'two-sided'
+        )
 
         # Add an assertion so that the test fails if p_value > alpha_prime
         # YOUR CODE HERE
+        #== assert successful when p-value is greater than 0.05 ==
+        assert p_value > alpha_prime
