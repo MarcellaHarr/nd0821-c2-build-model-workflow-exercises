@@ -12,6 +12,12 @@ def pytest_addoption(parser):
 
     # COMPLETE HERE: add the option for ks_alpha
 
+    #== include a paser for --ks_alpha ==
+    parser.addoption(
+        "--ks_alpha",
+        action = "store"
+    )
+
 
 @pytest.fixture(scope="session")
 def data(request):
@@ -40,3 +46,15 @@ def ks_alpha(request):
 
     # COMPLETE HERE: read the option ks_alpha from the command line,
     # and return it as a float
+
+    #== collect and configure the --ks_alpha fixture ==
+    ks_alpha = (
+        request.config.option.ks_alpha
+    )
+
+    #== console message if CLI is missing ==
+    if ks_alpha is None:
+        pytest.fail("--ks_alpha is missing on the command line.")
+
+    #== return ks_alpha value as a float ==
+    return float(ks_alpha)

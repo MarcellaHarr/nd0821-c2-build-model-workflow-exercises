@@ -3,7 +3,7 @@ import scipy.stats
 
 # COMPLETE HERE: make this test accept the fixtures defined in the
 # conftest.py file (data and ks_alpha)
-def test_kolmogorov_smirnov(x, y):  # TODO: update x and y here.
+def test_kolmogorov_smirnov(data, ks_alpha):  # TODO: update x and y here.
 
     sample1, sample2 = data
 
@@ -25,6 +25,11 @@ def test_kolmogorov_smirnov(x, y):  # TODO: update x and y here.
     for col in columns:
 
         ts, p_value = scipy.stats.ks_2samp(sample1[col], sample2[col])
+
+        #== display p-val and alpha prime vals ==
+        print(
+            f"{col} p-value is {p_value:.6f}, and the alpha-prime is {alpha_prime:.6f}"
+        )
 
         # NOTE: as always, the p-value should be interpreted as the probability of
         # obtaining a test statistic (TS) equal or more extreme that the one we got
